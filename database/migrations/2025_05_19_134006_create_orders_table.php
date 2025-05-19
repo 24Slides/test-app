@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+
+            /** @TODO: make sure it should be float */
+            $table->float('amount');
+
+            $table->foreignId('account_id')->constrained();
+
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

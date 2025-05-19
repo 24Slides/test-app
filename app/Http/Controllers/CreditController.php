@@ -2,65 +2,40 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCreditRequest;
-use App\Http\Requests\UpdateCreditRequest;
-use App\Models\Credit;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class CreditController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * @param Request $request
+     *
+     * @return JsonResponse
      */
-    public function index()
+    public function add(Request $request): JsonResponse
     {
-        //
+        return response()->json('');
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Note: pay for order
+     *
+     * @param Request $request
+     *
+     * @return JsonResponse
      */
-    public function create()
+    public function subtract(Request $request): JsonResponse
     {
-        //
+        return response()->json('');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * @param Request $request
+     *
+     * @return JsonResponse
      */
-    public function store(StoreCreditRequest $request)
+    public function refund(Request $request): JsonResponse
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Credit $credit)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Credit $credit)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateCreditRequest $request, Credit $credit)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Credit $credit)
-    {
-        //
+        return response()->json('');
     }
 }

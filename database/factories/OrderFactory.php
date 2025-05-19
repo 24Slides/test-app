@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Account;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,8 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'account_id' => Account::factory(),
+            'amount' => fake()->randomFloat(2, 0, 1000),
         ];
     }
 }

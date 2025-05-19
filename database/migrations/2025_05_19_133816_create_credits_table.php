@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('credits', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('account_id')->constrained();
+            $table->float('amount');
+
             $table->timestamps();
         });
     }
