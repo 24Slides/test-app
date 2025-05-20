@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('credits', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('account_id')->constrained();
-            $table->float('amount');
-            $table->dateTime('expiration');
+            $table->foreignId('credit_id')->constrained();
+            $table->foreignId('order_id')->constrained();
+            $table->unsignedTyny('type');
+            $table->decimal('amount');
 
             $table->timestamps();
         });
